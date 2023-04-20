@@ -1,0 +1,28 @@
+/* src/styles/MoneyTransfer.css */
+@import './SignIn.css';
+
+.transfer-form {
+    background-color: rgba(34, 34, 34, 0.8);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 80%;
+    max-width: 400px;
+    position: relative;
+    z-index: 10;
+}
+
+.transfer-form h2 {
+    margin-bottom: 1.5rem;
+    color: var(--color-text);
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.form-group button {
+    display: inline-block;
+    margin: 0 auto;
+}
