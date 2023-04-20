@@ -7,6 +7,8 @@ import ForgotPassword from './components/ForgotPassword';
 import { AuthProvider } from './components/AuthContext';
 import MoneyTransfer from './components/MoneyTransfer';
 import TransactionHistory from './components/TransactionHistory';
+import CryptoExchange from './components/CryptoExchange';
+import Settings from './components/Settings';
 
 
 function App() {
@@ -20,6 +22,8 @@ function App() {
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/transfer" element={<MoneyTransfer />} />
           <Route path="/history" element={<TransactionHistory />} />
+          <Route path="/crypto-exchange" element={<CryptoExchange />} />
+          <Route path="/settings" element={<Settings />} />
         </Routes>
       </AuthProvider>
     </Router>

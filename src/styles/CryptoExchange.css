@@ -1,0 +1,23 @@
+/* src/styles/CryptoExchange.css */
+@import './SignIn.css';
+
+.crypto-exchange {
+    background-color: rgba(34, 34, 34, 0.8);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 80%;
+    max-width: 450px;
+    position: relative;
+    z-index: 10;
+}
+
+.crypto-exchange h2 {
+    margin-bottom: 1.5rem;
+    color: var(--color-text);
+}
+
+.crypto-exchange p {
+    margin-bottom: 1.5rem;
+    color: var(--color-text);
+}
