@@ -1,0 +1,59 @@
+/* Colores personalizados */
+:root {
+    --color-primary: #3498db;
+    --color-secondary: #2ecc71;
+    --color-accent: #f1c40f;
+    --color-bg: #222;
+    --color-text: #f4f4f4;
+}
+
+.dashboard {
+    background-color: rgba(34, 34, 34, 0.8);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.dashboard h2 {
+    margin-bottom: 1.5rem;
+    color: var(--color-text);
+}
+
+.dashboard .balances {
+    margin-bottom: 20px;
+}
+
+.dashboard .options .btn {
+    display: block;
+    margin-bottom: 10px;
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: var(--color-text);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.dashboard .options .btn:hover {
+    background-color: var(--color-secondary);
+    border-color: var(--color-secondary);
+}
+
+.dashboard .options .btn:focus {
+    box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.5);
+}
+
+.dashboard a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.dashboard a:hover {
+    color: var(--color-secondary);
+    text-decoration: underline;
+}
