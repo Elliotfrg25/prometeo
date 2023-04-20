@@ -1,0 +1,44 @@
+/* SignUp.css */
+.signup-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(34, 34, 34, 0.8);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 80%;
+    max-width: 400px;
+}
+
+.signup-form h2 {
+    margin-bottom: 1.5rem;
+    color: var(--color-text);
+}
+
+.signup-form p.signin-link {
+    margin-top: 1rem;
+    color: var(--color-accent);
+}
+
+.signup-form p.signin-link a {
+    color: var(--color-secondary);
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.signup-form p.signin-link a:hover {
+    color: var(--color-accent);
+    text-decoration: underline;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.form-group button {
+    display: inline-block;
+    margin: 0 auto;
+}
