@@ -8,13 +8,18 @@ const SignIn = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        e.stopPropagation();
         const email = e.target.email.value;
         const password = e.target.password.value;
         signIn(email, password);
     };
 
+    const handleClick = (e) => {
+        console.log('Container clicked:', e.target);
+    };
+
     return (
-        <div className="container">
+        <div className="container" onClick={handleClick}>
             <h1 className="title">PROMETEO</h1>
             <div className="signin-form">
                 <h2>Iniciar sesión</h2>
@@ -53,8 +58,3 @@ const SignIn = () => {
 };
 
 export default SignIn;
-
-// He agregado la función handleSubmit que manejará el evento de envío del formulario y utilizará la función signIn proporcionada 
-//por el hook useAuth.También he agregado los atributos name a los elementos de entrada para poder acceder a sus valores en la 
-//función handleSubmit.Finalmente, he agregado el atributo onSubmit al formulario para llamar a la función handleSubmit cuando se 
-//envíe el formulario.
