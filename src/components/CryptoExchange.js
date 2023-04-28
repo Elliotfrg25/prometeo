@@ -1,11 +1,13 @@
 // src/components/CryptoExchange.js
 import React, { useState } from 'react';
+import { FormControl, InputLabel, MenuItem, Select, TextField } from '@mui/material';
+import CustomButton from './CustomButton/CustomButton';
 import '../styles/CryptoExchange.css';
 
-const CryptoExchange = () => { // eslint-disable-next-line
+const CryptoExchange = () => {
     const [selectedCurrency, setSelectedCurrency] = useState('BTC');
     const [amount, setAmount] = useState(0);
-    const [action, setAction] = useState('buy'); // eslint-disable-next-line
+    const [action, setAction] = useState('buy');
     const [price, setPrice] = useState(50000); // Precio de ejemplo
 
     const handleAmountChange = (e) => {
@@ -29,32 +31,35 @@ const CryptoExchange = () => { // eslint-disable-next-line
                 <p>Precio actual de {selectedCurrency}: ${price}</p>
                 <form onSubmit={handleSubmit}>
                     <div className="form-group">
-                        <label htmlFor="amount">Monto</label>
-                        <input
+                        <TextField
                             id="amount"
+                            label="Monto"
                             type="number"
-                            step="0.01"
-                            className="form-control"
+                            InputProps={{ inputProps: { step: 0.01 } }}
+                            variant="outlined"
                             value={amount}
                             onChange={handleAmountChange}
                             required
                         />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="action">Acción</label>
-                        <select
-                            id="action"
-                            className="form-control"
-                            value={action}
-                            onChange={handleActionChange}
-                        >
-                            <option value="buy">Comprar</option>
-                            <option value="sell">Vender</option>
-                        </select>
+                        <FormControl variant="outlined">
+                            <InputLabel id="action-label">Acción</InputLabel>
+                            <Select
+                                labelId="action-label"
+                                id="action"
+                                value={action}
+                                onChange={handleActionChange}
+                                label="Acción"
+                            >
+                                <MenuItem value="buy">Comprar</MenuItem>
+                                <MenuItem value="sell">Vender</MenuItem>
+                            </Select>
+                        </FormControl>
                     </div>
-                    <button type="submit" className="btn btn-primary">
+                    <CustomButton type="submit">
                         {action === 'buy' ? 'Comprar' : 'Vender'} {selectedCurrency}
-                    </button>
+                    </CustomButton>
                 </form>
             </div>
         </div>
@@ -62,3 +67,4 @@ const CryptoExchange = () => { // eslint-disable-next-line
 };
 
 export default CryptoExchange;
+

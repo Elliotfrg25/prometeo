@@ -11,11 +11,12 @@ body {
     background-color: var(--color-bg);
     color: var(--color-text);
     font-family: 'Roboto', sans-serif;
+    margin: 0;
+    /* Añade esto para eliminar el margen predeterminado del navegador */
 }
 
 .container {
     position: relative;
-    /* Cambia 'fixed' a 'relative' */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -56,18 +57,13 @@ body {
     margin-top: 15px;
     text-align: center;
     display: flex;
-    /* Añade display flex */
     justify-content: center;
-    /* Añade justificación al centro */
     flex-wrap: wrap;
-    /* Añade wrap para mantener los elementos dentro del contenedor */
 }
 
 .signin-options li {
     list-style-type: none;
-    /* Remueve viñetas de la lista */
     padding: 5px 10px;
-    /* Añade algo de padding */
 }
 
 .signup-separator {
@@ -124,7 +120,6 @@ body {
     height: 100vh;
 }
 
-/* Regla agregada para el aspecto de la etiqueta input */
 input {
     outline: none;
     border: none;
@@ -136,7 +131,5 @@ input {
 .title {
     font-size: 5rem;
     margin-bottom: 1rem;
-    /* Agrega un margen inferior para separar el título del formulario */
     z-index: 2;
-    /* Asegura que el título esté por encima del formulario */
 }

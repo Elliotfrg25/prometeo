@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/SignIn.css';
 import { useAuth } from "./AuthContext";
+import CustomButton from './CustomButton/CustomButton';
 
 const SignIn = () => {
     const { signIn } = useAuth();
@@ -42,9 +43,9 @@ const SignIn = () => {
                             required
                         />
                     </div>
-                    <button type="submit" className="btn btn-primary">
+                    <CustomButton variant="contained" type="submit">
                         Iniciar sesión
-                    </button>
+                    </CustomButton>
                 </form>
                 <p className="forgot-password">
                     <Link to="/forgot-password">¿Olvidaste tu contraseña?</Link>
