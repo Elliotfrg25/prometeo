@@ -34,7 +34,8 @@ const useCoinGeckoAPI = (currency) => {
                 if (response.data && response.data[currency.toLowerCase()] && response.data[currency.toLowerCase()].usd) {
                     setPrice(response.data[currency.toLowerCase()].usd);
                 } else {
-                    throw new Error('No se pudo obtener el precio de la moneda');
+                    console.error('API Response does not have price data:', response.data); // Añade esta línea
+                    throw new Error('No se pudo obtener la información de la moneda');
                 }
 
                 const chartResponse = await axios.get(
@@ -49,7 +50,7 @@ const useCoinGeckoAPI = (currency) => {
                 setChartData(prices);
                 setChartLabels(dates);
             } catch (error) {
-                console.error('Error fetching price data:', error); // Añade esta línea
+                console.error('Error fetching price data:', error);
                 setError(error.message);
             } finally {
                 setIsLoading(false);
@@ -63,6 +64,7 @@ const useCoinGeckoAPI = (currency) => {
 };
 
 export default useCoinGeckoAPI;
+
 
 
 
